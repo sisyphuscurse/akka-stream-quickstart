@@ -28,3 +28,18 @@
    * 使用trait在语言层面完成has-a的组合能力
 
 这一切将从一个场景开始。
+
+
+@@@ index
+
+* [场景描述](story/index.md)
+* [构思数据流图解决方案](solution/index.md)
+* [环境准备](env/index.md)
+* [使用Akka Stream绘制数据流图](akka-stream/index.md)
+* [业务函数](scala/index.md)
+* [使用函数式编程提升业务函数](functional-programming/index.md)
+* [把他们拼起来](combine/index.md)
+* [背后的范畴论](category-theory/index.md)
+* [小结](summary/index.md)
+
+@@@

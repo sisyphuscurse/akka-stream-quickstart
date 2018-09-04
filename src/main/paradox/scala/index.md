@@ -1,3 +1,4 @@
+## 基础篇
 变量/不变量声明
 ```dtd
 var i: Int = 0
@@ -18,6 +19,7 @@ for ( x <- List(1, 2, 3, 4) ) i += x
 println(x)
 ```
 
+## 递归函数与List
 递归函数形式
 ```dtd
 def sum(xs: List[Int]): Int = xs match {
@@ -56,6 +58,7 @@ xs.foldLeft(0)(_ + _)
 xs.foldLeft(1)(_ * _)
 ```
 
+## 函数对象
 Functional Set
 ```dtd
 type Set = Int => Boolean
@@ -127,8 +130,7 @@ val f: (Int, Int) => Int = _ + _
 val g: Int => Int => Int = f.curried
 val h: ( (Int, Int) ) => Int = f.tupled
 ```
-
-高阶函数(Higher Order Function)
+## 高阶函数(Higher Order Function)与map函数
 ```
 List[Int].map[Int](f: Int => Int): List[Int] => List[Int]
 ```
@@ -146,4 +148,15 @@ val lifted: List[Int] => List[Int] = _ map double
 ```dtd
 val xss : List[List[Int]] = List(List(1, 2, 3), List(4, 5, 6), List(7, 8, 9, 10)
 sum(xss map sum)
+```
+### 升级对map的认识
+对于给定的二维数组求和问题，利用给定的函数```sum: List[Int] => Int```方法求解时，可以这样思考。
+
+![map](./map.png)
+
+最终可以得到
+```
+def map[A, B](f: A => B): List[A] => List[B] = _ map f
+val summatrix = sum compose map(sum)
+summatrix(xss)
 ```

@@ -62,7 +62,7 @@ type Set = Int => Boolean
 def contains(s: Set)(x: Int): Boolean = s(x)
 def singleton(a: Int): Set = (x: Int) => a == x
 def union(s0: Set, s1: Set): Set = (x: Int) => s0(x) || s1(x)
-def intersect(s0: Set, s1: Set): Set = ???
+def intersect(s0: Set, s1: Set): Set = ??? //请自己实现一下
 
 ```
 Function is Object

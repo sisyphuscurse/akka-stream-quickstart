@@ -53,6 +53,7 @@ def product(xs: List[Int]): Int = {
 等价的foldLeft
 ```dtd
 xs.foldLeft(0)(_ + _)
+xs.foldLeft(1)(_ * _)
 ```
 
 Functional Set

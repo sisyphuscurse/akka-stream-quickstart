@@ -1,8 +1,3 @@
-@@@ index
-
-@@@
-
-
 变量/不变量声明
 ```dtd
 var i: Int = 0
@@ -10,7 +5,9 @@ val j: Int = 0
 ```
 
 条件分支
+```
 def f(j: Int) : Int = if ( j < 0 ) j else j
+```
 
 for"循环"
 ```

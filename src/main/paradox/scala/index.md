@@ -6,7 +6,7 @@ val j: Int = 0
 
 条件分支
 ```
-def f(j: Int) : Int = if ( j < 0 ) j else j
+def f(j: Int) : Int = if ( j < 0 ) - j else j
 ```
 
 for"循环"

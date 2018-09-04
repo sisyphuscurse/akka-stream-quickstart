@@ -129,7 +129,9 @@ val h: ( (Int, Int) ) => Int = f.tupled
 ```
 
 高阶函数(Higher Order Function)
+```
 List[Int].map[Int](f: Int => Int): List[Int] => List[Int]
+```
 ```dtd
 val xs = List(1, 2, 3, 4, 5)
 xs.map(double)
